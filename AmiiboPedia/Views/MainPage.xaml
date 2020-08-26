@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             mc:Ignorable="d"
+             x:Class="AmiiboPedia.MainPage"
+             Title="Home">
+    <Grid>
+        <magic:GradientView VerticalOptions="FillAndExpand">
+            <magic:GradientView.GradientSource>
+                <magic:LinearGradient Angle="180">
+                    <magic:GradientStop Color="#2E3336" Offset="0" />
+                    <magic:GradientStop Color="#AE1F23" Offset="1" />
+                </magic:LinearGradient>
+            </magic:GradientView.GradientSource>
+        </magic:GradientView>
+        <StackLayout>
+            <Image
+                Grid.Row="1"
+                Source="amiibo_logo.png"
+                WidthRequest="150"
+                HeightRequest="150"/>
+            <Label
+                FontSize="Title"
+                Grid.Row="2"
+                HorizontalTextAlignment="Center"
+                TextColor="White"
+                Text="Bienvenido a AmiiboArmy"/>
+            <Label
+                Grid.Row="3"
+                HorizontalTextAlignment="Center"
+                TextColor="White"
+                Text="Gracias por utilizar la versión alpha de AmiiboArmy, no olvides visitar enragestudio.com para ver el progreso de este y otros proyectos en desarrollo. Recuerda que es un proyecto OpenSource."/>
+            <Button 
+                Grid.Row="6"
+                Margin="0,10,0,24"
+                CornerRadius="20"
+                WidthRequest="245"
+                HeightRequest="40"
+                FontAttributes="Bold"
+                Text="Buscar Amiibo"
+                Clicked="GoPageAmiibo"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>
